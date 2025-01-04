@@ -18,6 +18,7 @@ namespace Exam
             Console.WriteLine($"Mark: {Mark}");
             Console.WriteLine("Choices of Question:");
             foreach (var answer in Answers)
+
             {
                 Console.WriteLine($"{answer.AnswerId}: {answer.AnswerText}");
             }
