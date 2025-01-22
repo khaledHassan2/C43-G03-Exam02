@@ -1,25 +1,6 @@
 ﻿namespace Exam
 {
 
-    // Base Question Class
-    
-
-    // Derived Question Types
-   
-
-   
-
-    // Answer Class
-   
-
-    // Base Exam Class
-  
-
-    // Derived Exam Types
-   
-
-    
-    // Main Program
     class Program
     {
         static void Main(string[] args)
@@ -60,9 +41,9 @@
 
                 if (questionType == 1)
                 {
-                    answers.Add(new Answer(1, "False"));
-                    answers.Add(new Answer(2, "True"));
-                    Console.WriteLine("Enter Correct Answer (1 for False, 2 for True):");
+                    answers.Add(new Answer(1, "True"));
+                    answers.Add(new Answer(2, "False"));
+                    Console.WriteLine("Enter Correct Answer (1 for True, 2 for False):");
                     int correctAnswerId = int.Parse(Console.ReadLine());
                     var correctAnswer = answers.Find(a => a.AnswerId == correctAnswerId);
                     questions.Add(new TrueFalseQuestion(body, mark, answers, correctAnswer));
