@@ -16,5 +16,9 @@ namespace Exam
             AnswerId = id;
             AnswerText = text;
         }
+        public Answer()
+        {
+            
+        }
     }
 }

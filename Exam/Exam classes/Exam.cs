@@ -10,15 +10,16 @@ namespace Exam
     {
         public int Time { get; set; }
         public int NumberOfQuestions { get; set; }
-        public List<Question> Questions { get; set; }
+        public Question[] Questions { get; set; }
 
-        public Exam(int time, int numberOfQuestions, List<Question> questions)
+        public Exam(int time, int numberOfQuestions)
         {
             Time = time;
             NumberOfQuestions = numberOfQuestions;
-            Questions = questions;
+           
         }
 
+        public abstract void CreatListQue();
         public abstract void ShowExam();
     }
 }

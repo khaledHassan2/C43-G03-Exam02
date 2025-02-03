@@ -8,19 +8,25 @@ namespace Exam
 {
     abstract class Question
     {
+        public abstract string Header { get; }
         public string Body { get; set; }
-        public int Mark { get; set; }
-        public List<Answer> Answers { get; set; }
-        public Answer CorrectAnswer { get; set; }
 
-        public Question(string body, int mark, List<Answer> answers, Answer correctAnswer)
+        public int Mark { get; set; }
+        public Answer[] Answers { get; set; }
+        public Answer RightAnswer { get; set; }
+        public Answer UserAnswer { get; set; }
+
+
+        public Question()
         {
-            Body = body;
-            Mark = mark;
-            Answers = answers;
-            CorrectAnswer = correctAnswer;
+            RightAnswer=new Answer();
+            UserAnswer=new Answer();
         }
 
-        public abstract void Display();
+        public abstract void AddQ();
+        public override string ToString()
+        {
+            return $"Header: {Header}\nMark: {Mark}\nBody: {Body}\n";
+        }
     }
 }
